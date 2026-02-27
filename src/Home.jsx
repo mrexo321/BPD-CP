@@ -37,6 +37,156 @@ const Home = () => {
       {/* --- HERO SECTION --- */}
       <HeroSection />
 
+      {/* --- NEW SECTION: VISIONARY IMPACT HIGHLIGHT --- */}
+      <section className="py-24 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            {/* KIRI: Visual Composition */}
+            <div className="relative">
+              {/* Main Image Card */}
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="relative z-10 rounded-[50px] overflow-hidden border-[12px] border-slate-50 shadow-2xl"
+              >
+                <img
+                  src="/api/placeholder/600/800" // Ganti dengan foto santri digital atau aksi sosial
+                  alt="BPD Impact"
+                  className="w-full h-[600px] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#064e3b]/80 via-transparent to-transparent" />
+
+                {/* Floating Stats on Image */}
+                <div className="absolute bottom-10 left-10 text-white">
+                  <p className="text-5xl font-black mb-1">#1</p>
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] opacity-80">
+                    Ekosistem Digital Masjid
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Decorative Floating Element */}
+              <motion.div
+                animate={{ y: [0, -20, 0] }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="absolute -right-12 -top-12 z-20 hidden md:block"
+              >
+                <div className="bg-[#B2D766] p-8 rounded-[40px] shadow-xl rotate-12">
+                  <div className="text-[#064e3b] font-black text-center">
+                    <p className="text-4xl">100%</p>
+                    <p className="text-[10px] uppercase tracking-widest mt-1">
+                      Transparan
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Small Overlay Card */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="absolute -bottom-8 -right-8 z-20 bg-white p-8 rounded-[40px] shadow-2xl max-w-[280px] border border-slate-100 hidden lg:block"
+              >
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 bg-[#064e3b]/5 rounded-2xl flex items-center justify-center">
+                    <Star className="text-[#d4af37]" fill="#d4af37" size={24} />
+                  </div>
+                  <p className="font-black text-[#064e3b] leading-tight">
+                    Terakreditasi A (Nasional)
+                  </p>
+                </div>
+                <p className="text-slate-500 text-xs leading-relaxed">
+                  BaitulMaal Pondok Digital dikelola dengan standar audit
+                  kepatuhan syariah yang ketat.
+                </p>
+              </motion.div>
+            </div>
+
+            {/* KANAN: Content & Narrative */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="lg:pl-10"
+            >
+              <h2 className="text-[#d4af37] font-bold tracking-[0.3em] text-sm uppercase mb-6 flex items-center gap-3">
+                <span className="w-8 h-[1px] bg-[#d4af37]"></span>
+                Tentang Gerakan Kami
+              </h2>
+
+              <h3 className="text-5xl md:text-6xl font-black text-[#064e3b] leading-[1.1] mb-8 tracking-tighter">
+                Membangun Peradaban <br />
+                <span className="text-[#B2D766]">Dimulai dari Masjid.</span>
+              </h3>
+
+              <div className="space-y-8">
+                <div className="flex gap-6">
+                  <div className="shrink-0 w-12 h-12 rounded-full bg-[#B2D766]/10 flex items-center justify-center text-[#064e3b] font-bold">
+                    01
+                  </div>
+                  <div>
+                    <h4 className="font-black text-xl text-[#064e3b] mb-2">
+                      Transformasi Digital Dakwah
+                    </h4>
+                    <p className="text-slate-500 text-sm leading-relaxed">
+                      Kami tidak hanya menyalurkan bantuan, tapi membangun
+                      sistem. Digitalisasi masjid adalah kunci kemandirian
+                      ekonomi umat masa depan.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-6">
+                  <div className="shrink-0 w-12 h-12 rounded-full bg-[#B2D766]/10 flex items-center justify-center text-[#064e3b] font-bold">
+                    02
+                  </div>
+                  <div>
+                    <h4 className="font-black text-xl text-[#064e3b] mb-2">
+                      Pemberdayaan Berkelanjutan
+                    </h4>
+                    <p className="text-slate-500 text-sm leading-relaxed">
+                      Melalui Digital Fundraising Academy, kami mencetak pejuang
+                      ekonomi yang siap mengabdi di seluruh penjuru nusantara.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-12 pt-10 border-t border-slate-100 flex items-center gap-8">
+                <div>
+                  <p className="text-3xl font-black text-[#064e3b]">24/7</p>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                    Digital Support
+                  </p>
+                </div>
+                <div className="w-[1px] h-10 bg-slate-200" />
+                <div>
+                  <p className="text-3xl font-black text-[#064e3b]">Audit</p>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                    Kemenag RI
+                  </p>
+                </div>
+                <Link
+                  to="/about"
+                  className="ml-auto w-14 h-14 rounded-full bg-[#064e3b] flex items-center justify-center text-white hover:bg-[#B2D766] transition-colors group"
+                >
+                  <TrendingUp
+                    className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+                    size={20}
+                  />
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* --- EKOSISTEM DAMPAK (3 PILLARS) --- */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">

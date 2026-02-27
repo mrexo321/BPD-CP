@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import HeroSection from "../components/HeroSection";
 import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 const HomeLayout = ({ children }) => {
   // Variabel Warna Spesifik
@@ -35,63 +36,7 @@ const HomeLayout = ({ children }) => {
 
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans">
-      {/* --- NAVIGATION --- */}
-      <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-[#B2D766]/10">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3 group">
-            {/* Logo Box menggunakan warna hijau segar #B2D766 */}
-            <div className="w-10 h-10 bg-[#B2D766] rounded-xl flex items-center justify-center shadow-lg shadow-[#B2D766]/20 group-hover:rotate-6 transition-transform">
-              <span className="text-[#064e3b] font-black text-xl">B</span>
-            </div>
-
-            <div>
-              {/* Teks Brand menggunakan Hijau Tua agar tegas */}
-              <h1 className="font-black text-[#064e3b] leading-none tracking-tighter text-lg">
-                BAITULMAAL
-              </h1>
-              <p className="text-[10px] font-bold text-[#B2D766] tracking-[0.2em] uppercase">
-                Pondok Digital
-              </p>
-            </div>
-          </Link>
-
-          <div className="hidden md:flex items-center gap-10 font-bold text-[11px] uppercase tracking-widest text-slate-500">
-            <Link
-              to="/about"
-              className="hover:text-[#B2D766] transition-colors relative group"
-            >
-              Tentang Kami
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#B2D766] transition-all group-hover:w-full"></span>
-            </Link>
-            <Link
-              to="/programs"
-              className="hover:text-[#B2D766] transition-colors relative group"
-            >
-              Program
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#B2D766] transition-all group-hover:w-full"></span>
-            </Link>
-            <Link
-              to="/impact"
-              className="hover:text-[#B2D766] transition-colors relative group"
-            >
-              Impact
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#B2D766] transition-all group-hover:w-full"></span>
-            </Link>
-            <Link
-              to="/contact-us"
-              className="hover:text-[#B2D766] transition-colors relative group"
-            >
-              Kontak
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#B2D766] transition-all group-hover:w-full"></span>
-            </Link>
-
-            {/* Button CTA menggunakan warna hijau segar dengan teks hijau tua agar kontras tinggi */}
-            <button className="bg-[#B2D766] text-[#064e3b] px-8 py-3 rounded-2xl hover:bg-[#064e3b] hover:text-white transition-all shadow-lg shadow-[#B2D766]/20 font-black">
-              Mulai Berbagi
-            </button>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {children}
 

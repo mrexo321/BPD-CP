@@ -8,6 +8,8 @@ import IslamicSocialImpact from "./components/IslamicSocialImpact";
 import DigitalAcademyPillar from "./components/DigitalAcademyPilar";
 import CommunityMobilization from "./components/CommunityMobilization";
 import ContactUs from "./components/ContactUs";
+import DonatePage from "./components/DonatePage";
+
 const App = () => {
   return (
     <Routes>
@@ -19,6 +21,7 @@ const App = () => {
       <Route path="/pilar-2" element={<DigitalAcademyPillar />} />
       <Route path="/pilar-3" element={<CommunityMobilization />} />
       <Route path="/contact-us" element={<ContactUs />} />
+      <Route path="/donate" element={<DonatePage />} />
     </Routes>
   );
 };

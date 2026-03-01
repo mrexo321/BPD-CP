@@ -1,1 +1,240 @@
 @import "tailwindcss";
+
+@theme {
+    --color-primary: var(--color-primary, #B2D766);
+    --color-secondary: var(--color-secondary, #064e3b);
+    --color-accent: var(--color-accent, #d4af37);
+    --color-light-accent: var(--color-light-accent, #fdf6e3);
+    --color-soft-bg: var(--color-soft-bg, #ecf3f0);
+    --color-footer-bg: var(--color-footer-bg, #B2D766);
+}
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   Dynamic Color Override System
+   ============================================
+   Override hardcoded Tailwind arbitrary hex classes 
+   agar mengikuti CSS custom properties.
+   Ini memungkinkan perubahan warna dari admin panel
+   tanpa harus rewrite semua komponen.
+   ============================================ */
+
+/* --- PRIMARY (#B2D766) overrides --- */
+.bg-\[\#B2D766\] {
+    background-color: var(--color-primary) !important;
+}
+
+.text-\[\#B2D766\] {
+    color: var(--color-primary) !important;
+}
+
+.border-\[\#B2D766\] {
+    border-color: var(--color-primary) !important;
+}
+
+.from-\[\#B2D766\] {
+    --tw-gradient-from: var(--color-primary) !important;
+}
+
+.to-\[\#B2D766\] {
+    --tw-gradient-to: var(--color-primary) !important;
+}
+
+.via-\[\#B2D766\] {
+    --tw-gradient-via: var(--color-primary) !important;
+}
+
+.fill-\[\#B2D766\] {
+    fill: var(--color-primary) !important;
+}
+
+/* Primary with opacity variants */
+.bg-\[\#B2D766\]\/10 {
+    background-color: color-mix(in srgb, var(--color-primary) 10%, transparent) !important;
+}
+
+.bg-\[\#B2D766\]\/20 {
+    background-color: color-mix(in srgb, var(--color-primary) 20%, transparent) !important;
+}
+
+.border-\[\#B2D766\]\/10 {
+    border-color: color-mix(in srgb, var(--color-primary) 10%, transparent) !important;
+}
+
+.border-\[\#B2D766\]\/20 {
+    border-color: color-mix(in srgb, var(--color-primary) 20%, transparent) !important;
+}
+
+.border-\[\#B2D766\]\/30 {
+    border-color: color-mix(in srgb, var(--color-primary) 30%, transparent) !important;
+}
+
+.shadow-\[\#B2D766\]\/10 {
+    --tw-shadow-color: color-mix(in srgb, var(--color-primary) 10%, transparent) !important;
+}
+
+.shadow-\[\#B2D766\]\/20 {
+    --tw-shadow-color: color-mix(in srgb, var(--color-primary) 20%, transparent) !important;
+}
+
+/* Primary hex in arbitrary format (lowercase #b2d766) */
+.text-\[\#b2d766\] {
+    color: var(--color-primary) !important;
+}
+
+.bg-\[\#b2d766\] {
+    background-color: var(--color-primary) !important;
+}
+
+/* --- SECONDARY (#064e3b) overrides --- */
+.bg-\[\#064e3b\] {
+    background-color: var(--color-secondary) !important;
+}
+
+.text-\[\#064e3b\] {
+    color: var(--color-secondary) !important;
+}
+
+.border-\[\#064e3b\] {
+    border-color: var(--color-secondary) !important;
+}
+
+.from-\[\#064e3b\] {
+    --tw-gradient-from: var(--color-secondary) !important;
+}
+
+.to-\[\#064e3b\] {
+    --tw-gradient-to: var(--color-secondary) !important;
+}
+
+.fill-\[\#064e3b\] {
+    fill: var(--color-secondary) !important;
+}
+
+/* Secondary with opacity variants */
+.bg-\[\#064e3b\]\/5 {
+    background-color: color-mix(in srgb, var(--color-secondary) 5%, transparent) !important;
+}
+
+.bg-\[\#064e3b\]\/10 {
+    background-color: color-mix(in srgb, var(--color-secondary) 10%, transparent) !important;
+}
+
+.bg-\[\#064e3b\]\/20 {
+    background-color: color-mix(in srgb, var(--color-secondary) 20%, transparent) !important;
+}
+
+.text-\[\#064e3b\]\/40 {
+    color: color-mix(in srgb, var(--color-secondary) 40%, transparent) !important;
+}
+
+.text-\[\#064e3b\]\/50 {
+    color: color-mix(in srgb, var(--color-secondary) 50%, transparent) !important;
+}
+
+.text-\[\#064e3b\]\/70 {
+    color: color-mix(in srgb, var(--color-secondary) 70%, transparent) !important;
+}
+
+.text-\[\#064e3b\]\/80 {
+    color: color-mix(in srgb, var(--color-secondary) 80%, transparent) !important;
+}
+
+.border-\[\#064e3b\]\/10 {
+    border-color: color-mix(in srgb, var(--color-secondary) 10%, transparent) !important;
+}
+
+.border-\[\#064e3b\]\/20 {
+    border-color: color-mix(in srgb, var(--color-secondary) 20%, transparent) !important;
+}
+
+.shadow-\[\#064e3b\]\/5 {
+    --tw-shadow-color: color-mix(in srgb, var(--color-secondary) 5%, transparent) !important;
+}
+
+.shadow-\[\#064e3b\]\/10 {
+    --tw-shadow-color: color-mix(in srgb, var(--color-secondary) 10%, transparent) !important;
+}
+
+.shadow-\[\#064e3b\]\/20 {
+    --tw-shadow-color: color-mix(in srgb, var(--color-secondary) 20%, transparent) !important;
+}
+
+/* --- ACCENT (#d4af37) overrides --- */
+.bg-\[\#d4af37\] {
+    background-color: var(--color-accent) !important;
+}
+
+.text-\[\#d4af37\] {
+    color: var(--color-accent) !important;
+}
+
+.border-\[\#d4af37\] {
+    border-color: var(--color-accent) !important;
+}
+
+.fill-\[\#d4af37\] {
+    fill: var(--color-accent) !important;
+}
+
+/* --- HOVER STATE OVERRIDES --- */
+.hover\:bg-\[\#B2D766\]:hover {
+    background-color: var(--color-primary) !important;
+}
+
+.hover\:text-\[\#B2D766\]:hover {
+    color: var(--color-primary) !important;
+}
+
+.hover\:bg-\[\#064e3b\]:hover {
+    background-color: var(--color-secondary) !important;
+}
+
+.hover\:text-\[\#064e3b\]:hover {
+    color: var(--color-secondary) !important;
+}
+
+/* --- GROUP HOVER OVERRIDES --- */
+.group-hover\:bg-\[\#064e3b\]:is(:where(.group):hover *) {
+    background-color: var(--color-secondary) !important;
+}
+
+.group-hover\:text-\[\#064e3b\]:is(:where(.group):hover *) {
+    color: var(--color-secondary) !important;
+}
+
+.group-hover\:text-\[\#B2D766\]:is(:where(.group):hover *) {
+    color: var(--color-primary) !important;
+}
+
+.group-hover\:text-white:is(:where(.group):hover *) {
+    color: white !important;
+}
+
+/* --- FOCUS OVERRIDES --- */
+.focus\:ring-\[\#B2D766\]:focus {
+    --tw-ring-color: var(--color-primary) !important;
+}
+
+.focus\:border-\[\#B2D766\]:focus {
+    border-color: var(--color-primary) !important;
+}
+
+/* --- Shadow with hover overrides --- */
+.hover\:shadow-\[\#B2D766\]\/10:hover {
+    --tw-shadow-color: color-mix(in srgb, var(--color-primary) 10%, transparent) !important;
+}
+
+.hover\:shadow-\[\#B2D766\]\/20:hover {
+    --tw-shadow-color: color-mix(in srgb, var(--color-primary) 20%, transparent) !important;
+}
+
+/* Inline style overrides for LoginLayout & LoginPage */
